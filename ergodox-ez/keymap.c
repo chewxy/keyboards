@@ -149,6 +149,9 @@ enum apl_char_names {
   BACKSLASH_BAR,
   SLASH_BAR,
   QUAD_COLON,
+
+  // Additions
+  DELTA
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -232,6 +235,9 @@ const uint32_t PROGMEM unicode_map[] = {
   [BACKSLASH_BAR]    = 0x2340, // ⍀
   [SLASH_BAR]        = 0x233F, // ⌿
   [QUAD_COLON]       = 0x2360, // ⍠     79
+
+  [DELTA] = 0x0394, // Δ
+
 };
 
 
@@ -259,7 +265,7 @@ Note this requires a version of QMK that has UC_M_EM as an "OS".
 │        │    │    │    │    │    │    │              │    │    │    │    │    │    │        │
 └───┬────┼────┼────┼────┼────┼────┴────┘              └────┴────┼────┼────┼────┼────┼────┬───┘
     │    │    │  ⍞ │  ⍬ │    │                                  │    │    │    │    │    │
-    │    │    │ ←  │ →  │   │     ┌────┬────┐   ┌────┬────┐    │    │lin │mac │winc    │
+    │    │ Δ   │ ←  │ →  │   │     ┌────┬────┐   ┌────┬────┐    │    │lin │mac │winc    │
     │    │    │    │    │    │     │    │    │   │    │    │    │    │    │    │    │    │
     └────┴────┴────┴────┴────┘     │    │    │   │    │    │    └────┴────┴────┴────┴────┘
                                    │    │    │   │    │    │
@@ -315,8 +321,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_QUES,        XP(27, 28),     XP(29, 31),     X(32),           XP(33, 34),    KC_TRANSPARENT,                                 KC_TRANSPARENT, X(35),          X(36),          XP(37, 38),     XP(39, 40),     XP(41, 42),     XP(65, 66),
     KC_TRANSPARENT, XP(47, 48),     X(49),          X(50),          KC_UNDS,         XP(52, 5),                                                                     XP(53, 54),     XP(55, 56),     KC_QUOT,        XP(59, 60),     XP(63, 64),     KC_TRANSPARENT,
     KC_TRANSPARENT, X(67),          X(68),          X(70),          X(71),           X(72),         XP(61, 62),                                     XP(24, 25),     X(73),          KC_PIPE,        X(77),          XP(78, 79),     XP(75, 76),     KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, XP(43, 44),     XP(45, 46),     KC_TRANSPARENT,                                                                                 KC_TRANSPARENT, UC_M_LN,        UC_M_OS,        UC_M_WC,        KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, X(80),          XP(43, 44),     XP(45, 46),     KC_TRANSPARENT,                                                                                 KC_TRANSPARENT, UC_M_LN,        UC_M_OS,        UC_M_WC,        KC_TRANSPARENT,
+                                                                                                             X(43), KC_TRANSPARENT, KC_TRANSPARENT, X(45),
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
