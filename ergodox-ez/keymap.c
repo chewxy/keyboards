@@ -6,10 +6,9 @@
 #include "keymap_spanish.h"
 #include "keymap_hungarian.h"
 #include "keymap_swedish.h"
-#include "keymap_br_abnt2.h"
+#include "keymap_brazilian_abnt2.h"
 #include "keymap_canadian_multilingual.h"
-#include "keymap_german_ch.h"
-#include "keymap_jp.h"
+#include "keymap_japanese.h"
 #include "keymap_korean.h"
 #include "keymap_bepo.h"
 #include "keymap_italian.h"
@@ -385,7 +384,7 @@ void set_layer_color(int layer) {
 }
 
 void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+  if (keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case 0:
       set_layer_color(0);
@@ -456,7 +455,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-uint32_t layer_state_set_user(uint32_t state) {
+layer_state_t layer_state_set_user(layer_state_t state) {
 
   uint8_t layer = biton32(state);
 
