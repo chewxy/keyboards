@@ -287,10 +287,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_DELETE,                                      KC_BSPACE,      KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
     KC_LALT,        KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           KC_QUOTE,       KC_ENTER,
     KC_LSHIFT,      KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,           KC_SCOLON,                                      KC_EQUAL,       KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSHIFT,
-    MO(1),          KC_TRANSPARENT, KC_TRANSPARENT, MO(4),          MO(3),                                                                                          TG(2),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CAPSLOCK,
+    MO(1),          MO(3),          KC_TRANSPARENT, MO(4),          KC_LGUI,                                                                                        TG(2),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_CAPSLOCK,
                                                                                                     KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,
                                                                                                                     KC_ESCAPE,      KC_TRANSPARENT,
-                                                                                    KC_SPACE,       KC_LCTRL,       KC_LGUI,        KC_TRANSPARENT, KC_RCTRL,       KC_SPACE
+                                                                                    KC_SPACE,       KC_LCTRL,       KC_LALT,        KC_RGUI,        KC_RCTRL,       KC_SPACE
   ),
 
   /* Layer 1: Supplementary keys */
